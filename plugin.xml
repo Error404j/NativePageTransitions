@@ -42,12 +42,12 @@
 
 	<!-- android -->
 	<platform name="android">
-		<config-file target="res/xml/config.xml" parent="/*">
+		<edit-config file="app/src/main/AndroidManifest.xml" target="/manifest/application" mode="merge">
 			<feature name="NativePageTransitions">
 				<param name="android-package" value="com.telerik.plugins.nativepagetransitions.NativePageTransitions"/>
         <param name="onload" value="true" />
 			</feature>
-		</config-file>
+		</edit-config>
 		<source-file src="src/android/NativePageTransitions.java" target-dir="src/com/telerik/plugins/nativepagetransitions"/>
 		<source-file src="src/android/lib/FlipAnimation.java" target-dir="src/com/telerik/plugins/nativepagetransitions/lib"/>
 		<source-file src="src/android/lib/AnimationFactory.java" target-dir="src/com/telerik/plugins/nativepagetransitions/lib"/>
